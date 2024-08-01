@@ -39,7 +39,8 @@ end
 ---   This throws a coroutine error if the function is invoked in outside of `wezterm.lua` in the -
 ---   initial load of the Terminal config.
 function BackDrops:set_files()
-   self.files = wezterm.read_dir(wezterm.config_dir .. PATH_SEP .. 'backdrops')
+   local favourites_4k = os.getenv("HOME") .. PATH_SEP .. 'Pictures' .. PATH_SEP .. 'Favourites' .. PATH_SEP .. '4K'
+   self.files = wezterm.read_dir(favourites_4k)
    wezterm.GLOBAL.background = self.files[1]
    return self
 end

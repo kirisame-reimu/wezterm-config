@@ -138,17 +138,23 @@ local keys = {
       action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
    },
 
+   -- panes: resize
+   { key = "UpArrow", mods = mod.SUPER_REV, action = act.AdjustPaneSize({ "Up", 1 }) },
+   { key = "DownArrow", mods = mod.SUPER_REV, action = act.AdjustPaneSize({ "Down", 1 }) },
+   { key = "LeftArrow", mods = mod.SUPER_REV, action = act.AdjustPaneSize({ "Left", 1 }) },
+   { key = "RightArrow", mods = mod.SUPER_REV, action = act.AdjustPaneSize({ "Right", 1 }) },
+
    -- key-tables --
-   -- resizes fonts
-   {
-      key = 'f',
-      mods = 'LEADER',
-      action = act.ActivateKeyTable({
-         name = 'resize_font',
-         one_shot = false,
-         timemout_miliseconds = 1000,
-      }),
-   },
+  --  -- resizes fonts
+  --  {
+  --     key = 'f',
+  --     mods = 'LEADER',
+  --     action = act.ActivateKeyTable({
+  --        name = 'resize_font',
+  --        one_shot = false,
+  --        timemout_miliseconds = 5000,
+  --     }),
+  --  },
    -- resize panes
    {
       key = 'p',
@@ -156,20 +162,21 @@ local keys = {
       action = act.ActivateKeyTable({
          name = 'resize_pane',
          one_shot = false,
-         timemout_miliseconds = 1000,
+         timemout_miliseconds = 5000,
       }),
    },
 }
 
+
 -- stylua: ignore
 local key_tables = {
-   resize_font = {
-      { key = 'k',      action = act.IncreaseFontSize },
-      { key = 'j',      action = act.DecreaseFontSize },
-      { key = 'r',      action = act.ResetFontSize },
-      { key = 'Escape', action = 'PopKeyTable' },
-      { key = 'q',      action = 'PopKeyTable' },
-   },
+  --  resize_font = {
+  --     { key = 'k',      action = act.IncreaseFontSize },
+  --     { key = 'j',      action = act.DecreaseFontSize },
+  --     { key = 'r',      action = act.ResetFontSize },
+  --     { key = 'Escape', action = 'PopKeyTable' },
+  --     { key = 'q',      action = 'PopKeyTable' },
+  --  },
    resize_pane = {
       { key = 'k',      action = act.AdjustPaneSize({ 'Up', 1 }) },
       { key = 'j',      action = act.AdjustPaneSize({ 'Down', 1 }) },
