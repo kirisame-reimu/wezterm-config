@@ -16,6 +16,16 @@
 
 ---
 
+### Forked from [KevinSilvester/wezterm-config](https://github.com/KevinSilvester/wezterm-config)
+
+  Changes(on ubuntu 22.04):
+
+- default font_size = 16
+- window_decoration = false
+- can't change font_size by key bind
+- change picture path: ~/Picture/Favourites/4K/
+- ...
+
 ### Features
 
 - [**Background Image Selector**](https://github.com/KevinSilvester/wezterm-config/blob/master/utils/backdrops.lua)
@@ -57,9 +67,10 @@
 
 ### Getting Started
 
-- ##### Requirements:
+- #### Requirements:
 
   - WezTerm `>= 20240127-113634-bbcac864`
+  - fish(recomended)(replace bash)
 
   - <details>
     <summary>JetBrainsMono Nerd Font</summary>
@@ -87,11 +98,11 @@
 
 &nbsp;
 
-- ##### Steps:
+- #### Steps:
 
   1.  ```sh
       # On Windows and Unix systems
-      git clone https://github.com/KevinSilvester/wezterm-config.git ~/.config/wezterm
+      git clone https://github.com/kirisame-reimu/wezterm-config.git ~/.config/wezterm
       ```
   2.  And Done!!! 🎉🎉
 
